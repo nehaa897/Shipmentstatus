@@ -1,0 +1,25 @@
+<template>
+	<lightning-card>
+		<div>
+			<h3 slot="title">
+				<lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+				Tracking Application
+			</h3>
+		</div>
+		<div class="slds-p-around_medium lgc-bg">
+			<lightning-input type="text" label="Enter Tracking No" value={trackingno}></lightning-input>
+		</div>
+
+		<div class="slds-p-around_medium lgc-bg">
+			<lightning-button label="Get Status" onclick={handleClick}></lightning-button>
+		</div>
+		<div class="slds-p-around_medium ">
+
+			<template if:true={status}>
+				<lightning-output-field field-name=" Tracking Number Status" value={status}>
+				</lightning-output-field>
+			</template>
+
+		</div>
+	</lightning-card>
+</template>
